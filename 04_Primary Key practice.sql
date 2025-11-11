@@ -17,3 +17,4 @@ values
 ("Watermelon", 210);
 
 select * from my_product;
+
