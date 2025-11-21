@@ -50,7 +50,7 @@ select * from player;
 select * from employee;
 # rename table 重新命名表格
 alter table employee rename 員工;
-# rename coloum name 重新命名欄位
+# rename coloum name 重新命名欄位passengers
 alter table 員工 change column employee_salary 員工薪資 int;
 select * from 員工;
 
