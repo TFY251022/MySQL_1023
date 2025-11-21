@@ -43,9 +43,9 @@ group by pclass;
 
 -- 8.
 select embarked as 登船點, count(embarked) as 登船人數, 
-COUNT(embarked) * 100 / (select COUNT(embarked) 
+round(COUNT(embarked) * 100 / (select COUNT(embarked) 
     from full_passengers
-WHERE embarked IS NOT NULL AND NOT embarked = '') as 登船點百分比 
+WHERE embarked IS NOT NULL AND NOT embarked = ''), 2) as 登船點百分比 
 from full_passengers
 where embarked is not null and embarked != ''
 group by embarked;
